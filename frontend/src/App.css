@@ -38,5 +38,18 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #ca4444;
+}
+.div{
+  width: 530px;
+  height: 894px;
+  display: flex;
+  background-image: url("assets/react.jpg");
+
+  background-position: center;
+
+
+}
+body{
+
 }
