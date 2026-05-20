@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import logo from './assets/react.svg'
+
+import logo from './assets/react.jpg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
@@ -91,14 +92,16 @@ function App() {
   }
 
   return (
+      <div className="div">
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
         <h1>
           ToDo Liste
         </h1>
         <form onSubmit={handleSubmit} className='todo-form'>
-          <label htmlFor="taskdescription">Neues Todo anlegen:</label>
+          <label htmlFor="taskdescription">Neues Todo anlegen: </label>
+
           <input
             type="text"
             value={taskdescription}
@@ -111,6 +114,7 @@ function App() {
         </div>
       </header>
     </div>
+      </div>
   );
 }
 
