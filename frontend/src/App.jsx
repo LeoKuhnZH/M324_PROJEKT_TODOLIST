@@ -96,7 +96,7 @@ function App() {
     <div className="App">
       <header className="App-header">
 
-        <h1>
+        <h1 className="todo">
           ToDo Liste
         </h1>
         <form onSubmit={handleSubmit} className='todo-form'>
