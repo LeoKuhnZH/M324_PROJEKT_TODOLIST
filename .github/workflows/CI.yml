@@ -4,7 +4,6 @@ on:
   pull_request:
 
 jobs:
-
   frontend-build:
     runs-on: ubuntu-latest
 
@@ -25,6 +24,11 @@ jobs:
         working-directory: frontend
         run: npm run build
 
+      - name: Frontend Artifact hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build
+          path: frontend/build
 
   backend-build:
     runs-on: ubuntu-latest
@@ -37,12 +41,14 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 25
+          java-version: 17
 
       - name: Maven Build
         working-directory: backend
         run: mvn clean package
 
-      - name: Run Backend Tests
-        working-directory: backend
-        run: mvn test
+      - name: Backend Artifact hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-jar
+          path: backend/target/*.jar
