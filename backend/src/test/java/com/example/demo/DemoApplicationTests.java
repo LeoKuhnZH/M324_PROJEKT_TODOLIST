@@ -6,8 +6,9 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.Test;
 
-public class DemoApplication {
+public class DemoApplicationTests {
 
 	private List<String> tasks = new ArrayList<>();
 	private ObjectMapper mapper = new ObjectMapper();
