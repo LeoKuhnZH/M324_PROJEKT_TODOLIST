@@ -74,7 +74,7 @@ function App() {
   }
 
   /**
-   * render all task lines
+   * render all task lines.
    * @param {*} todos : Task list
    * @returns html code snippet
   */
