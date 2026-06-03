@@ -37,8 +37,12 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 25
 
       - name: Maven Build
         working-directory: backend
         run: mvn clean package
+
+      - name: Run Backend Tests
+        working-directory: backend
+        run: mvn test
