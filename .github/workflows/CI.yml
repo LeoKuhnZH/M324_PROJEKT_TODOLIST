@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: frontend-build
-          path: frontend/build
+          path: frontend/dist
 
   backend-build:
     runs-on: ubuntu-latest
