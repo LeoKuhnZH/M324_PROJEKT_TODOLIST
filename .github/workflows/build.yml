@@ -27,6 +27,12 @@ jobs:
         working-directory: frontend
         run: npm run build
 
+      - name: Frontend Artifact hochladen
+        uses: actions/upload-artifact@v4
+        with:
+        name: frontend-build
+        path: frontend/build
+
 
   backend-build:
     runs-on: ubuntu-latest
@@ -44,3 +50,8 @@ jobs:
       - name: Maven Build
         working-directory: backend
         run: mvn clean package
+      - name: Backend Artifact hochladen
+        uses: actions/upload-artifact@v4
+        with:
+        name: backend-jar
+        path: backend/target/*.jar
