@@ -1,0 +1,44 @@
+name: Build Pipeline
+
+on:
+  pull_request:
+
+jobs:
+
+  frontend-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Node.js Setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Dependencies installieren
+        working-directory: frontend
+        run: npm install
+
+      - name: React Build
+        working-directory: frontend
+        run: npm run build
+
+
+  backend-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Java Setup
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Maven Build
+        working-directory: backend
+        run: mvn clean package
