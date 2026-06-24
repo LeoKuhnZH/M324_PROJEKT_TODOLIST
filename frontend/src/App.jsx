@@ -9,7 +9,7 @@ function App() {
   const [taskdescription, setTaskdescription] = useState("");
 
   /** Is called when the html form is submitted. It sends a POST request to the API endpoint '/tasks' and updates the component's state with the new todo.
-  ** In this case a new taskdecription is added to the actual list on the server.
+  ** In this c ase a new taskdecription is added to the actual list on the server.
   */
   const handleSubmit = event => {
     event.preventDefault();
