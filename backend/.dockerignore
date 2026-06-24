@@ -1,0 +1,29 @@
+# Ignore Maven build outputs
+target/
+*.jar
+*.war
+
+# Ignore IDE and configuration files
+.idea/
+.settings/
+.classpath
+.project
+*.iml
+
+# Ignore git metadata
+.git/
+.gitignore
+
+# Ignore local scripts/wrappers
+*.cmd
+mvnw
+.mvn/
+
+# Ignore Docker files themselves
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Ignore documentation
+README.md
+test.md
