@@ -35,7 +35,7 @@ function App() {
   ** The task property in the state is used to store the current value of the input field as the user types into it.
   ** This is necessary because React operates on the principle of state and props, which means that a component's state
   ** determines the component's behavior and render.
-  ** If we used the value directly from the HTML form field, we wouldn't be able to update the component's state and react to changes in the input field.
+  ** If we used the valu e directly from the HTML form field, we wouldn't be able to update the component's state and react to changes in the input field.
   */
   const handleChange = event => {
     setTaskdescription(event.target.value);
