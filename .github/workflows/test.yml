@@ -32,3 +32,16 @@ jobs:
 
       - name: Run tests
         run: npm test -- --runTestsByPath src/App.test.js
+
+      - name: Build frontend
+        run: npm run build
+
+      - name: Upload test artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build-and-test-artifacts
+          path: |
+            frontend/dist/
+            frontend/coverage/
+            frontend/jest-results.xml
