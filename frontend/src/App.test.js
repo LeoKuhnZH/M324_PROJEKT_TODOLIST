@@ -96,6 +96,7 @@ describe('App component', () => {
 		fireEvent.click(screen.getByText('Absenden'));
 		expect(screen.getByText(/Bitte gib eine Aufgabe ein/i)).toBeInTheDocument();
 	});
+	//Versuch2
 
 
 
